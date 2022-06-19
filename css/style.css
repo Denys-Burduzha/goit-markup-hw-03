@@ -9,7 +9,12 @@
     --team-background-color:#F5F4FA; 
     --studio-color:#000000;
     --button-color: #188CE8;
+
+    --items: 4;
+    --indent: 30px; 
 }
+
+
 
 
 body {
@@ -18,13 +23,75 @@ body {
     color: var(--primary-text-color);
     letter-spacing: 0.03em;
 }
+
+.section {
+    padding: 94px;
+}
+
+.container{
+   width: 1200px;
+   padding: 0 15px; 
+   margin-left: auto;
+   margin-right: auto;
+   
+}
+
+/* reset */
+
 .list {
+    padding: 0;
+    margin: 0;
     list-style: none
 }
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+
+/* сетка flex-box */
+
+.card-set{
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--indent) / 2);
+
+}
+
+.card-set-item {
+
+    flex-basis: calc((100 - var(--indent) * var(--items)) / var(--items));
+    margin: calc(var(--indent) / 2);
+
+}
+
+
+
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 
 a {
     text-decoration: none;
 }
+
+/*header*/
+
+.header {
+    display: block;
+}
+
+
+
 
 /* logo */
 
@@ -38,6 +105,10 @@ a {
     font-size: 26px;
     line-height: 1.2;
     letter-spacing: 0.03em;
+
+    
+    margin-right: 93px;
+    padding: 24px 0 25px ;
 }
 
 .studio {
@@ -58,21 +129,60 @@ a {
 }
 
 
-/* header */
-
 
 
 /*site-nav*/
 
+.site-nav .item:not(:last-child),
+.auth-nav .item:not(:last-child){
+    margin-right: 50px;
+}
+  
+
+
+.container-nav,
+.nav {
+    align-items: center;
+    display: flex;
+}
+
+
+
+.site-nav,
+.auth-nav
+ {
+    display: flex;
+}
+
+
+   
+.site-nav .link {
+    display: block;
+    padding: 32px 0;
+}
+
+.auth-nav {
+     
+    margin-left: 331px;
+    padding: 32px 0;
+    
+}
+
+
+
+
 .link{ 
+
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    
 }
 
-.filter-button.current,
+
 .site-nav .link.current,
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -95,6 +205,7 @@ a {
 
 .hero {
     background-color: var(--hero-background-color);
+    text-align: center;
 }
 
 .hero-title {
@@ -102,43 +213,88 @@ a {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+   
+    width: 696px;
+    margin-left: 238px;
+    margin-bottom: 30px;
+    padding-top: 195px;
+   
 }
+
+/* button */
 
 
 .hero-button {
+    border-radius: 4px;
+    border: 1px solid transparent;
+    padding: 10px 32px ;
+
     background-color:var(--accent-color);
     color: #FFFFFF;
+
     font-weight: 700;
     font-size: 16px;
     line-height: 1.18;
-    
     letter-spacing: 0.06em;
+
+    margin-bottom: 200px;
 }
 
 .hero-button:hover,
 .hero-button:focus {
+
     background-color:var(--button-color);
     color: var(--header-color);
 }
 
+.filter-button.current,
 .filter-button:hover,
 .filter-button:focus {
+
     background-color: var(--accent-color);
     color: var(--header-color);
 }
 
+.filter-button{
+padding: 6px, 22px ;
+
+}
 
 
-/* section title */
+
+
+/* section regulations */
 
 
 .regulations-work,
-.Projects {
+.projects {
+
     opacity: 0;
 }
+
+.regulations {
+
+    display: flex;
+      
+}
+
+
+.regulations-list {
+
+    flex-basis: 270px;
+    
+}
+
+
+
+.regulations-list:not(:last-child){
+
+    margin-right: 30px;
+} 
+
 
 .regulations-title {
 
@@ -147,6 +303,8 @@ a {
     line-height: 1.4
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    margin-bottom: 10px;
 }
 
 .paragraph-title {
@@ -155,10 +313,13 @@ a {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7
-    letter-spacing: 0.03em;       
+    letter-spacing: 0.03em;
+   
+   
 }
 
-/* section work */
+
+
 
 
 
@@ -169,6 +330,7 @@ a {
     line-height: 1.14;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 50px;
 }
 
 /* section our-team */
@@ -176,6 +338,9 @@ a {
 .our-team {
     background-color: var(--team-background-color);
 }
+
+
+
 
 .team-name {
     font-weight: 500;
@@ -204,7 +369,7 @@ a {
 
 
 
-.Kyiv {
+.kyiv {
     color: var(--header-color);
     font-style: normal;
     font-weight: 400;
@@ -225,7 +390,27 @@ a {
  /* portfolio */
 
 
- .filter-button {
+
+.Project {
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+
+}
+
+
+
+.Project-list:not(:last-child){
+
+    margin-right: 8px;
+
+}
+
+
+
+.filter-button {
+
     font-family: inherit;
     font-family: 'Roboto';
     font-style: normal;
@@ -236,6 +421,8 @@ a {
     letter-spacing: 0.03em;
 } 
 
+
+
 .portfolio-name {
     color: var(--primary-text-color);
     font-weight: 700;
@@ -243,6 +430,9 @@ a {
     line-height: 2;
     letter-spacing: 0.06em;
 }
+
+
+
 
 .portfolio-text {
     color:var(--text-color) ;
