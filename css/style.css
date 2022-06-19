@@ -75,7 +75,7 @@ p {
 
 img {
     display: block;
-    max-width: 100%;
+    max-width:100%;
     height: auto;
 }
 
@@ -88,6 +88,7 @@ a {
 
 .header {
     display: block;
+    border-bottom: 1px solid #ECECEC;
 }
 
 
@@ -106,10 +107,13 @@ a {
     line-height: 1.2;
     letter-spacing: 0.03em;
 
-    
-    margin-right: 93px;
-    padding: 24px 0 25px ;
 }
+.logo-header {
+margin-right: 93px;
+    padding: 24px 0 25px;
+}
+    
+
 
 .studio {
     color:var(--studio-color);
@@ -126,6 +130,13 @@ a {
 .logo:hover
 .logo:focus{
     color: var(--accent-color);
+}
+
+
+.logo-footer{
+
+    padding-top: 39px;
+
 }
 
 
@@ -365,6 +376,16 @@ padding: 6px, 22px ;
 
 .footer {
     background-color: var(--hero-background-color);
+    padding-top: 39px;
+    padding-bottom: 60px;
+}
+
+
+
+.address{
+
+margin-top: 20px;
+
 }
 
 
@@ -375,6 +396,7 @@ padding: 6px, 22px ;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+    margin-bottom: 9px;
 }
 
 .mail {
@@ -382,6 +404,7 @@ padding: 6px, 22px ;
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
+    margin-bottom: 9px;
 }
 
 
@@ -440,6 +463,17 @@ padding: 6px, 22px ;
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.03em;
+}
+
+
+.portfolio-item {
+
+padding: 20px 24px;
+
+border-radius: 1px solid #EEEEEE;
+border-bottom: 1px solid #EEEEEE;
+border-left: 1px solid #EEEEEE;
+
 }
 
 
